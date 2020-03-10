@@ -1,5 +1,14 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions;
 
-class JanitorTest {
 
+
+public class JanitorTest {
+
+    @Test
+    public void janitorIsSweeping(){
+        Janitor underTest = new Janitor("Freddy", 40000);
+        underTest.Sweep();
+        boolean result = underTest.getIsSweeping();
+    }
 }

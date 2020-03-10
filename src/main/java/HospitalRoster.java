@@ -1,9 +1,9 @@
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
-public class Hospital {
+
+
+public class HospitalRoster {
     private HashMap<String, Employee> employeeList = new HashMap<>();
 
     public ArrayList<Employee> retrieveEmployeeList() {
@@ -15,6 +15,5 @@ public class Hospital {
             employeeToBePaid.receivePay();
         }
     }
-
-
+    public Employee retrieveEmployee(String employee) { return employeeList.get(employee);}
 }
