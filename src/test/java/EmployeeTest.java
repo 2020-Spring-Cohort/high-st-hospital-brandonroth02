@@ -8,7 +8,12 @@ public class EmployeeTest {
 
     @BeforeEach
     void setUp(){
-        underTest = new Employee( "TESTNAME", 100);
+        underTest = new Employee("TESTNAME", 100) {
+            @Override
+            public void receivePay() {
+
+            }
+        };
     }
 
     @Test
@@ -19,7 +24,12 @@ public class EmployeeTest {
 
     @Test
     public void shouldHaveAnotherName(){
-        Employee underTest = new Employee( "BILLIAM", 100);
+        Employee underTest = new Employee("BILLIAM", 100) {
+            @Override
+            public void receivePay() {
+
+            }
+        };
         String result = underTest.getName();
         assertEquals( "BILLIAM",result);
     }

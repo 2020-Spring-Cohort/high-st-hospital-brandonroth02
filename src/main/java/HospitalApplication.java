@@ -1,5 +1,5 @@
 public class  HospitalApplication {
-    
+
 
     public static void main(String[] args) {
         Doctor doctor = new Doctor("Acula", 90000, "Throat");
@@ -8,10 +8,10 @@ public class  HospitalApplication {
         Receptionist receptionist = new Receptionist("Pam", 45000);
         Patient patient = new Patient("Conrad");
         HospitalRoster payroll = new HospitalRoster();
-        payroll.hire(Doctor);
-        payroll.hire(Janitor);
-        payroll.hire(Nurse);
-        payroll.hire(Receptionist);
+        payroll.hire(doctor);
+        payroll.hire(janitor);
+        payroll.hire(nurse);
+        payroll.hire(receptionist);
 
 
 

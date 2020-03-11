@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class HospitalRosterTest {
@@ -12,7 +13,12 @@ public class HospitalRosterTest {
     @BeforeEach
     void setUp() {
         underTest = new HospitalRoster();
-        testEmployee = new Employee("TestEmployee", 100);
+        testEmployee = new Employee("TestEmployee", 100) {
+            @Override
+            public void receivePay() {
+
+            }
+        };
         underTest.hire(testEmployee);
     }
 
@@ -25,7 +31,7 @@ public class HospitalRosterTest {
     public void shouldPayAllEmployees(){
         underTest.payEmployees();
         ArrayList<Employee> retrievedEmployees = underTest.retrieveEmployeeList();
-        assertTrue(retrievedEmployees.get(0).getSalaryAmmount());
+        assertTrue(retrievedEmployees.get());
     }
 
 }
