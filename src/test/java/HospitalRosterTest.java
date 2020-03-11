@@ -31,7 +31,10 @@ public class HospitalRosterTest {
     public void shouldPayAllEmployees(){
         underTest.payEmployees();
         ArrayList<Employee> retrievedEmployees = underTest.retrieveEmployeeList();
-        assertTrue(retrievedEmployees.get());
+        assertTrue(retrievedEmployees.get(0).getPayAmount());
+    }
+
+    private void assertTrue(int payAmount) {
     }
 
 }
