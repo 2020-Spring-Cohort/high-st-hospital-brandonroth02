@@ -1,6 +1,5 @@
 public class  HospitalApplication {
-
-
+    
 
     public static void main(String[] args) {
         Doctor doctor = new Doctor("Acula", 90000, "Throat");
@@ -8,10 +7,23 @@ public class  HospitalApplication {
         Nurse nurse = new Nurse( "Ratched", 50000);
         Receptionist receptionist = new Receptionist("Pam", 45000);
         Patient patient = new Patient("Conrad");
+        HospitalRoster payroll = new HospitalRoster();
+        payroll.hire(Doctor);
+        payroll.hire(Janitor);
+        payroll.hire(Nurse);
+        payroll.hire(Receptionist);
 
 
 
         System.out.println("The employees of the hospital are as follows:");
+        System.out.println(payroll.retrieveEmployeeList());
+        payroll.payEmployees();
+        for (Employee employee: payroll.retrieveEmployeeList()){
+            System.out.println(employee);
+        }
+        System.out.println(payroll.retrieveEmployeeList());
+
+
 
 
 

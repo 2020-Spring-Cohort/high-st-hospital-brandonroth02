@@ -6,6 +6,10 @@ import java.util.HashMap;
 public class HospitalRoster {
     private HashMap<String, Employee> employeeList = new HashMap<>();
 
+    public void hire(Employee testEmployee){
+        employeeList.put(testEmployee.getName(), testEmployee);
+    }
+
     public ArrayList<Employee> retrieveEmployeeList() {
         return new ArrayList<>(employeeList.values());
     }
