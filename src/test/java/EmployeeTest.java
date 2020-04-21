@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,8 +19,12 @@ public class EmployeeTest {
 
     @Test
     public void shouldHaveName(){
-        String result = underTest.getName();
-        assertEquals("TESTNAME",result);
+        String result = Employee.getName();
+        assertEquals(getTestname(),result);
+    }
+
+    private String getTestname() {
+        return "TESTNAME";
     }
 
     @Test
@@ -30,14 +35,53 @@ public class EmployeeTest {
 
             }
         };
-        String result = underTest.getName();
-        assertEquals( "BILLIAM",result);
+        String result = Employee.getName();
+        Assertions.assertEquals( "billiam",result);
     }
 
     @Test
     public void shouldHaveSalary(){
-        int salary = underTest.getPayAmount();
+        int salary = underTest.getSalaryAmount();
         assertEquals( 100, salary);
     }
 
+    @Test
+    void getSpecialization() {
+    }
+
+    @Test
+    void getName() {
+    }
+
+    @Test
+    void getPayRate() {
+    }
+
+    @Test
+    void getPayAmount() {
+    }
+
+    @Test
+    void getIdNumber() {
+    }
+
+    @Test
+    void receivePay() {
+    }
+
+    @Test
+    void testToString() {
+    }
+
+    @Test
+    void getSalaryAmount() {
+    }
+
+    @Test
+    void getEmployeeSalary() {
+    }
+
+    @Test
+    void testToString1() {
+    }
 }

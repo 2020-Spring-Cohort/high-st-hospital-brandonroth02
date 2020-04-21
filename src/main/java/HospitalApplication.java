@@ -17,8 +17,8 @@ public class  HospitalApplication {
 
         System.out.println("The employees of the hospital are as follows:");
         System.out.println(payroll.retrieveEmployeeList());
-        payroll.payEmployees();
-        for (Employee employee: payroll.retrieveEmployeeList()){
+        payroll.payAllEmployees();
+        for (Employee employee: payroll.retrieveEmployeeList()) {
             System.out.println(employee);
         }
         System.out.println(payroll.retrieveEmployeeList());

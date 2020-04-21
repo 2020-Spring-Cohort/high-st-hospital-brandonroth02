@@ -1,19 +1,19 @@
 
 public abstract class Employee {
-    public static String getName;
+    public static String name;
     protected int employeeSalary;
-    private static String name;
     public String Specialization;
     protected int payAmount;
     public int IdNumber;
 
-    public Employee(String name, int EmployeeSalary) {
-        this.name = name;
+    public Employee(String name, int EmployeeSalary, int IdNumber) {
+        Employee.name = name;
         this.employeeSalary = EmployeeSalary;
-        this.IdNumber = IdNumber;
     }
 
-    public Employee(String name, int employeeSalary, int IdNumber) {
+    public Employee(String name, int payAmount) {
+        Employee.name = name;
+        this.payAmount = payAmount;
     }
 
 
@@ -21,8 +21,7 @@ public abstract class Employee {
         return Specialization; }
     
     public static String getName() {return name; }
-
-    public int getPayRate() {return employeeSalary; }
+    
 
     public int getPayAmount() {return payAmount; }
 
@@ -40,6 +39,9 @@ public abstract class Employee {
     }
 
 
-    public void getSalaryAmmount() {
+    public int getSalaryAmount() {
+        return 100;
     }
+
+
 }

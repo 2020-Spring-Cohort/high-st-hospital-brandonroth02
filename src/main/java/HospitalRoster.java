@@ -7,7 +7,7 @@ public class HospitalRoster {
     private HashMap<String, Employee> employeeList = new HashMap<>();
 
     public void hire(Employee testEmployee){
-        employeeList.put(testEmployee.getName(), testEmployee);
+        employeeList.put(Employee.getName(), testEmployee);
     }
 
     public ArrayList<Employee> retrieveEmployeeList() {
@@ -20,4 +20,7 @@ public class HospitalRoster {
         }
     }
     public Employee retrieveEmployee(String employee) { return employeeList.get(employee);}
+
+    public void payAllEmployees() {
+    }
 }
